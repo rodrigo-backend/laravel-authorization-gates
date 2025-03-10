@@ -17,6 +17,14 @@ class ProductController extends Controller
         return view('dashboard')->with('products', $this->products);
     }
 
+    public function create(){
+        return view('product-create');
+    }
+    
+    public function store(){
+        return ;
+    }
+
     public function __get($property){
         if(!property_exists($this, $property)){
             return null;
